@@ -58,8 +58,6 @@ Una vez que la base de datos está configurada, puedes ejecutar el proyecto con 
 dotnet run --project PayphoneWallet
 ```
 
-El servidor debería estar disponible en `http://localhost:5000` por defecto.
-
 ### 6. Pruebas
 
 Este proyecto incluye pruebas unitarias e integración. Para ejecutar las pruebas, puedes usar el siguiente comando:
@@ -68,41 +66,54 @@ Este proyecto incluye pruebas unitarias e integración. Para ejecutar las prueba
 dotnet test
 ```
 
-### 7. Autenticación
+### 7. Autenticación y Autorización
 
-La API utiliza autenticación básica para acceder a los endpoints de creación, actualización y eliminación de billeteras, así como las transferencias. Los usuarios no autenticados solo podrán acceder al endpoint de listar el historial de movimientos.
+La API utiliza **autenticación básica** para proteger los endpoints que permiten realizar acciones sobre las billeteras y las transferencias. A continuación, se especifican los requisitos de autenticación para las operaciones:
 
-Puedes usar un token de autenticación (por ejemplo, en los headers) al realizar solicitudes a los endpoints que requieren autenticación.
+#### Endpoints protegidos que requieren autenticación:
+- **Crear billetera** (POST /api/wallets)
+- **Actualizar billetera** (PUT /api/wallets)
+- **Eliminar billetera** (DELETE /api/wallets/{id})
+- **Realizar transferencia** (POST /api/transactions)
 
-## Endpoints
+Los **usuarios no autenticados** solo podrán acceder al siguiente endpoint:
+- **Listar historial de movimientos** (GET /api/transactions)
 
-### 1. **GET /api/wallets**
+#### Obtener un Token de Autenticación
 
-Obtiene la lista de todas las billeteras.
+Para realizar solicitudes a los endpoints protegidos, primero necesitas obtener un token de autenticación. Puedes hacerlo utilizando el endpoint `/api/auth/login`, proporcionando tus credenciales de usuario (nombre de usuario y contraseña).
 
-### 2. **POST /api/wallets**
+**Endpoint para obtener el token**:
+```
+POST /api/auth/login
+```
 
-Crea una nueva billetera.
+**Cuerpo de la solicitud** (JSON):
+```json
+{
+  "username": "tu_usuario",
+  "password": "tu_contraseña"
+}
+```
 
-### 3. **GET /api/wallets/{id}**
+**Respuesta (200 OK)**:
+Si las credenciales son correctas, recibirás un token JWT que podrás usar para autenticarte en futuras solicitudes.
 
-Obtiene una billetera por su ID.
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ikp1YW4gRHVyYW4iLCJpYXQiOjE1MTYyMzkwMjJ9.kIWG9xLbO2TKR9M8YogGnoLjFryQkGZdcH8qXZ-6JlY"
+}
+```
 
-### 4. **PUT /api/wallets/{id}**
+#### Usar el Token en las Solicitudes
 
-Actualiza una billetera existente.
+Una vez que tengas el token, debes incluirlo en el encabezado **Authorization** de cada solicitud que requiera autenticación.
 
-### 5. **DELETE /api/wallets/{id}**
-
-Elimina una billetera.
-
-### 6. **POST /api/transactions**
-
-Realiza una nueva transferencia entre billeteras.
-
-### 7. **GET /api/transactions**
-
-Obtiene el historial de transacciones.
+**Ejemplo de solicitud con token**:
+```http
+POST /api/wallets
+Authorization: Bearer <tu_token>
+```
 
 ## Notas
 
