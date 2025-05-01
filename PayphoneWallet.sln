@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Api", "PayphoneWallet\PayphoneWallet.Api.csproj", "{29E45490-E252-486A-8F6A-162F9EB46132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Business", "PayphoneWallet.Business\PayphoneWallet.Business.csproj", "{FE8156D9-0C13-4134-B97A-E269B5B3D9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Entities", "PayphoneWallet.Entities\PayphoneWallet.Entities.csproj", "{6C5412EE-2E06-4923-9C4B-22D4B49FAC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Infraestructure", "PayphoneWallet.Infraestructure\PayphoneWallet.Infraestructure.csproj", "{44432D9F-A7FA-4F1E-A0CA-29AC6712D7C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Core", "PayphoneWallet.Core\PayphoneWallet.Core.csproj", "{1DE76B32-20BA-4E79-B386-797BD9AFC59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayphoneWallet.Tests", "PayphoneWallet.Tests\PayphoneWallet.Tests.csproj", "{BD6E2D6E-A710-C795-5875-0C1CCAC74094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E45490-E252-486A-8F6A-162F9EB46132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E45490-E252-486A-8F6A-162F9EB46132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E45490-E252-486A-8F6A-162F9EB46132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E45490-E252-486A-8F6A-162F9EB46132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8156D9-0C13-4134-B97A-E269B5B3D9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8156D9-0C13-4134-B97A-E269B5B3D9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8156D9-0C13-4134-B97A-E269B5B3D9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8156D9-0C13-4134-B97A-E269B5B3D9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5412EE-2E06-4923-9C4B-22D4B49FAC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5412EE-2E06-4923-9C4B-22D4B49FAC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5412EE-2E06-4923-9C4B-22D4B49FAC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5412EE-2E06-4923-9C4B-22D4B49FAC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44432D9F-A7FA-4F1E-A0CA-29AC6712D7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44432D9F-A7FA-4F1E-A0CA-29AC6712D7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44432D9F-A7FA-4F1E-A0CA-29AC6712D7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44432D9F-A7FA-4F1E-A0CA-29AC6712D7C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE76B32-20BA-4E79-B386-797BD9AFC59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE76B32-20BA-4E79-B386-797BD9AFC59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE76B32-20BA-4E79-B386-797BD9AFC59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE76B32-20BA-4E79-B386-797BD9AFC59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6E2D6E-A710-C795-5875-0C1CCAC74094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6E2D6E-A710-C795-5875-0C1CCAC74094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6E2D6E-A710-C795-5875-0C1CCAC74094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6E2D6E-A710-C795-5875-0C1CCAC74094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9B877F4-7DDE-44B3-A849-4BA07DA6256C}
+	EndGlobalSection
+EndGlobal
